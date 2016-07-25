@@ -1,0 +1,141 @@
+$light: #387AA0;
+$accent: #B38B81;
+
+@mixin bg-gradient-t2b($start-colour, $end-colour) {
+    background-image:         linear-gradient(to bottom, $start-colour 30%, $end-colour);
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #FFF;
+}
+
+body {
+	color: #f3f3f3;
+}
+
+ion-content {
+	@include bg-gradient-t2b($light, $accent);
+	* {
+		background-color: transparent !important;
+	}
+	.item {
+		h2 {
+		color: #fff;
+		font-weight: 500;
+		& + p {
+			color: #f3f3f3;
+		}
+		}
+		p {
+			color: #fff;
+		}
+	}
+	.item-divider {
+		color: #e8e8e8;
+	}
+	.product__list {
+		.item {
+			border: 0;
+			background-color: rgba(255,255,255,0.5) !important;
+		}
+		.item-divider {
+		    color: #333333;
+		}
+	}
+	
+}
+
+.main {
+	.item {
+		border: 0;
+		margin: 20px;
+		background-color: rgba(255,255,255,0.05) !important;
+	}
+}
+
+.menu__list {
+	a {
+		color: #fff;
+	}
+	ion-item {
+		border: 0;
+		&.item-divider {
+			text-align: center;
+		}
+	}
+	hr {
+		width: 70%;
+		margin: 10px auto;
+	    background: linear-gradient(to right, transparentize($light, 0.5) 0%, rgba(255, 255, 255, 0.52) 25%, white 50%, rgba(255, 255, 255, 0.48) 75%, transparentize($light, 0.5) 100%);
+	    border: 0;
+	    height: 1px;
+	}
+}
+
+.card {
+	background-color: rgba(255,255,255,0.15) !important;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.bar.bar-calm.bar-footer {
+    background-image: none;
+    background-color: #E4B686;
+    padding: 20px 0px;
+    height: 60px;
+}
+
+.bar.bar-footer .title {
+    margin: 0;
+    line-height: 60px;
+}
+
+.item-thumbnail-left > img:first-child, .item-thumbnail-left .item-image, .item-thumbnail-left .item-content > img:first-child, .item-thumbnail-left .item-content .item-image {
+    top: calc(50% - 40px);
+}
+
+.button.toCart {
+	color: #fff;
+}
+
+.button .badge {
+    position: absolute;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    right: -4px;
+        font-size: 12px;
+    font-weight: normal;
+    border-radius: 50%;
+    line-height: 14px;
+ }
+
+.list:last-child {
+    margin-bottom: 59px;
+}
+
+.button.button-balanced {
+    background-color: transparentize(#33cd5f,.7) !important;
+}
+
+.button.button-assertive {
+    background-color: transparentize(#ef473a,.7) !important;
+}
+
+.popup-container .popup {
+    background-color: rgba(189, 169, 109, 0.9);
+}
+
+.popup-head {
+	border-bottom: none; 
+}
+
+.row {
+	.col-25 {
+		text-align: center;
+	}
+}
+.cati {
+	font-size: 65px;
+	display: inherit;
+	margin-top: 35px;
+}

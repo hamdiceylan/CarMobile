@@ -1,0 +1,123 @@
+<ion-view>
+	<ion-nav-title>
+		{{vm.item.Title}}
+	</ion-nav-title>
+
+	<ion-content>
+		<ion-slide-box ng-if="!!vm.item">
+			<ion-slide ng-repeat="pic in vm.item.Images | limitTo:15">
+				<div class="box blue article-slidebox">
+					<img ng-src="{{pic.ImageUrl}}"/>
+					<div class="item">
+						<!-- <div class="rating-container">
+							{{vm.item.rating.value.toFixed(1)}}
+							<rating ng-model="vm.item.rating.value" readonly="true" max="5"></rating>
+							{{vm.item.rating.reviews}} {{vm.item.rating.reviews === 1 ? 'review' : 'reviews'}}
+						</div> -->
+						<!-- <span>{{vm.item.category.value}}{{(vm.item.tagsString ? '-' : '')}}{{vm.item.tagsString}}</span> -->
+
+					</div>
+				</div>
+			</ion-slide>
+		</ion-slide-box>
+
+		<div class="bgBlack padding">
+			<h3>Wheels Deals</h3>
+			<div class="row">
+				<div class="col"><p><i class="ion-location"></i> x miles from you</p></div>
+				<div class="col"><p><i class="ion-android-call"></i> Call 0207 XXX XXXX</p></div>
+			</div>
+		</div>
+
+		<div class="content-inner" ng-if="vm.item">
+			<h1 ng-bind-html="vm.item.Title"></h1>
+
+
+			    <div class="tabs tabs-secondary" ng-init="activeTab = 0">
+			      <div class="tab-item" ng-class="{active: activeTab == 0}" ng-click="activeTab = 0">
+			        Spec
+			      </div>
+			      <div class="tab-item" ng-class="{active: activeTab == 1}" ng-click="activeTab = 1">
+			        Description
+			      </div>
+			    </div>  
+
+
+			    <div ng-show="activeTab == 1">
+				<p class="mTop20">{{vm.item.Description}}</p>
+
+			 
+			    </div>
+
+			    <div ng-show="activeTab == 0">
+
+			      <ion-list class="out">
+			<ion-item>
+					<div class="row">
+					  <div class="col col-33"><b>Price</b></div>
+					  <div class="col col-67">{{vm.item.Price}}</div>
+					</div>
+			</ion-item>
+
+					<ion-item><div class="row">
+					  <div class="col col-33"><b>Mileage</b></div>
+					  <div class="col col-67">{{vm.item.Mileage | limitTo: 20}}</div>
+					</div>
+					</ion-item></ion-item><ion-item><div class="row">
+					  <div class="col col-33"><b>Transmission</b></div>
+					  <div class="col col-67">{{vm.item.Transmission | limitTo: 20}}</div>
+					</div>
+					</ion-item><ion-item><div class="row">
+					  <div class="col col-33"><b>Fuel Type</b></div>
+					  <div class="col col-67">{{vm.item.FuelType | limitTo: 20}}</div>
+					</div>
+					</ion-item><ion-item><div class="row">
+					  <div class="col col-33"><b>Body Type</b></div>
+					  <div class="col col-67">{{vm.item.BodyType | limitTo: 20}}</div>
+					</div>
+					</ion-item><ion-item><div class="row">
+					  <div class="col col-33"><b>First Reg Date</b></div>
+					  <div class="col col-67">{{vm.item.FirstRegDate | limitTo: 20}}</div>
+					</div>
+					</ion-item><ion-item><div class="row">
+					  <div class="col col-33"><b>Engine Size</b></div>
+					  <div class="col col-67">{{vm.item.EngineSize | limitTo: 20}}</div>
+					</div>
+					</ion-item><ion-item><div class="row">
+					  <div class="col col-33"><b>Location</b></div>
+					  <div class="col col-67">{{vm.item.Location | limitTo: 20}}</div>
+					</div>
+					</ion-item>
+			</ion-list>
+			<h4>Other Specs:</h4>
+			     <ul class="super2">
+						<li ng-repeat="spec in vm.item.Specs">
+							<span><i class="ion-checkmark"></i>{{spec.SpecDescription}}</span>
+						</li>
+					</ul>
+    			</div>
+
+
+
+
+			
+
+			
+
+		<!-- 	<h3>Comments</h3>
+			<ion-list>
+				<ion-item class="item-text-wrap item-borderless" ng-repeat="comment in vm.item.comments | orderBy: '-timestamp'">
+					<h2>{{comment.author}}</h2>
+					<p class="comment-date">{{comment.timestamp | date : 'short'}}</p>
+					<p style="text-align: justify;">{{comment.text}}</p>
+				</ion-item>
+			</ion-list> -->
+
+		</div>
+<!-- 
+		<div class="padding-horizontal" ng-if="!!vm.item">
+			<button class="button button-full button-positive icon ion-chatboxes" ng-click="vm.showAddComment()"> Rate and comment</button>
+		</div> -->
+
+	</ion-content>
+</ion-view>

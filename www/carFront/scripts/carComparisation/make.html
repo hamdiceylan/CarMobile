@@ -1,0 +1,21 @@
+
+<ion-view>
+  <ion-nav-title>
+  Car Comparisation
+  </ion-nav-title>
+
+  <ion-content>
+
+
+    <div class="list">
+
+    <a class="item item-avatar" href="#/app/model/{{vm.carNumber}}/{{item.id}}" ng-repeat="item in vm.make">
+      <img ng-src="{{item.logo}}">
+      <h2>{{item.name}}</h2>
+    </a>
+
+   </div>
+
+
+  </ion-content>
+</ion-view>

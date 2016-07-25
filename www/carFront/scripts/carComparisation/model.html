@@ -1,0 +1,21 @@
+
+<ion-view>
+  <ion-nav-title>
+  Car Comparisation
+  </ion-nav-title>
+
+  <ion-content>
+
+
+    <div class="list">
+
+    <a class="item item-avatar" href="#/app/year/{{vm.carNumber}}/{{vm.makeId}}/{{item.id}}" ng-repeat="item in vm.models">
+      <img ng-src="http://carportal.azurewebsites.net/{{item.image}}">
+      <h2>{{item.name}}</h2>
+    </a>
+
+   </div>
+
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,38 @@
+<ion-view view-title="Ads" class="articles">
+
+	<ion-nav-buttons side="right">
+		<button class="button button-clear icon ion-android-options" ng-click="vm.showFilter()"></button>
+	</ion-nav-buttons>
+
+	<ion-content>
+		<!-- <ion-scroll zooming="true" direction="x" scrollbar-x="false" class="categories-filter">
+			<span ng-repeat="category in vm.items">
+				<button class="button button-light filter-button"
+					ng-click="vm.filterByCategory(category.key)"
+					ng-class="{'active-filter-button': category.key === vm.selectedCategory}">
+					{{category.price}}
+				</button>
+			</span>
+		</ion-scroll> -->
+		<div class="item search-box">
+			{{vm.items.length}} cars found
+		</div>
+		<div class="item item-thumbnail-left item-text-wrap"
+			ng-click="vm.openDetails($index)"
+			ng-repeat="item in vm.items">
+			<!-- <figure class="item-image">
+				<img ng-src="{{item.Images[0].ImageUrl}}">
+				<figcaption class="img-caption"><i class="ion-camera"></i>{{item.Images.length}}</figcaption>
+			</figure> -->
+			<div class="item-image item-background-image" ng-style="{'background-image': 'url({{item.Images[0].ImageUrl}})'}"></div>
+			<h2 ng-bind-html="item.Title" ></h2>
+			<div class="row">
+				<div class="col"><p class="tags"><i class="ion-camera"></i> {{item.Images.length}}</p></div>
+				<div class="col"><p class="tags"><i class="ion-speedometer"></i> {{item.Mileage}}</p></div>
+				<div class="col"><p class="tags"><i class="ion-pricetags"></i> £{{item.Price}}</p></div>
+			</div>
+			
+			
+		</div>
+	</ion-content>
+</ion-view>

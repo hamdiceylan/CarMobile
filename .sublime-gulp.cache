@@ -1,0 +1,1 @@
+{"/Users/c_ogoo/Projects/ionic.RestaurantO/gulpfile.js":{"sha1":"6f3399ec88bba7ef54b6775590e0e402d0b96e5a","tasks":{"default":{"name":"default","dependencies":"sass"},"sass":{"name":"sass","dependencies":""},"watch":{"name":"watch","dependencies":""},"install":{"name":"install","dependencies":"git-check"},"git-check":{"name":"git-check","dependencies":""}}}}

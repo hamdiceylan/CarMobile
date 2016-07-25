@@ -1,0 +1,20 @@
+
+<ion-view>
+  <ion-nav-title>
+  Car Comparisation
+  </ion-nav-title>
+
+  <ion-content>
+
+
+    <div class="list">
+
+    <a class="item item-avatar" href="#/app/version/{{vm.carNumber}}/{{vm.makeId}}/{{vm.modelId}}/{{item.year}}" ng-repeat="item in vm.years">
+      <h2>{{item.year}}</h2>
+    </a>
+
+   </div>
+
+
+  </ion-content>
+</ion-view>
