@@ -1,26 +1,103 @@
 
 <ion-view>
   <ion-nav-title>
-  Select car to compare
+    Araba Karşılaştırma
   </ion-nav-title>
 
   <ion-content>
 
+    <div class="row">
+      <div class="col col-50">
+        <a class="button icon-right ion-chevron-right button-energized" href="#/app/make/1">1. Aracı Seçiniz</a>
+      </div>
+      <div class="col col-50">
+        <a class="button icon-right ion-chevron-right button-energized" href="#/app/make/2">2. Aracı Seçiniz</a>
+      </div>
+    </div>
 
-    <div class="list">
+    <br>
+
+    <div class="row">
+      <div class="col col-30" >
+        <img ng-src="http://www.arabakarsilastirma.org/wp-content/uploads/2016/05/araba_yok.png" alt="">
+      </div>
+      <div class="col col-30">
+
+      </div>
+      <div class="col col-30">
+        <img ng-src="http://www.arabakarsilastirma.org/wp-content/uploads/2016/05/araba_yok.png" alt="">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-50">
+        {{vm.carName1}}
+      </div>
+      <div class="col col-50">
+        {{vm.carName1}}
+      </div>
+      </div>
 
 
-    <a class="button icon-right ion-chevron-right button-energized" href="#/app/make/1">Click to select first car</a>
-    </br>
-    </br>
-    <a class="button icon-right ion-chevron-right button-energized"  href="#/app/make/2">Click to select second car</a>
+    <div class="row">
+      <div class="col col-30">
+        <ul>
+          <li>{{vm.car1.silindirHacmi}} cc</li>
+          <li>{{vm.car1.beygirGucu}} hp</li>
 
-   </div>
+          <li>{{vm.car1.sehiriciYakit}} lt</li>
+          <li>{{vm.car1.sehirdisiYakit}} lt</li>
+          <li>{{vm.car1.ortalamaYakit}} lt</li>
+          <li>{{vm.car1.maksTork}} Nm</li>
+          <li>{{vm.car1.lastikEbatlari}}</li>
+          <li>{{vm.car1.hizlanma}} sn</li>
+          <li>{{vm.car1.uzunluk}} mm</li>
+          <li>{{vm.car1.genislik}} mm</li>
+          <li>{{vm.car1.yukseklik}} mm</li>
+          <li>{{vm.car1.bagajKapasitesi}} lt</li>
+          <li>{{vm.car1.bosAgirlik}} kg</li>
+          <li>{{vm.car1.yakitDeposu}} lt</li>
+        </ul>
+      </div>
+      <div class="col col-30">
+        <ul>
+          <li>Silindir Hacmi</li>
+          <li>Beygir Gücü</li>
+          <li>Şehiriçi Yakıt</li>
+          <li>Şehirdışı Yakıt</li>
+          <li>Ortalama Yakıt</li>
+          <li>Maks Tork</li>
+          <li>Lastik Ebatları</li>
+          <li>Hızlanma</li>
+          <li>Uzunluk</li>
+          <li>Genişlik</li>
+          <li>Yükseklik</li>
+          <li>Bagaj</li>
+          <li>Boş Ağırlık</li>
+          <li>Yakıt Deposu</li>
 
-   {{vm.car1}}
+        </ul>
+      </div>
+      <div class="col col-30">
 
-   {{vm.car2}}
+        <ul>
+          <li>{{vm.car2.silindirHacmi}} cc</li>
+          <li>{{vm.car2.beygirGucu}} hp</li>
+          <li>{{vm.car2.sehiriciYakit}} lt</li>
+          <li>{{vm.car2.sehirdisiYakit}} lt</li>
+          <li>{{vm.car2.ortalamaYakit}} lt</li>
+          <li>{{vm.car2.maksTork}} Nm</li>
+          <li>{{vm.car2.lastikEbatlari}}</li>
+          <li>{{vm.car2.hizlanma}} sn</li>
+          <li>{{vm.car2.uzunluk}} mm</li>
+          <li>{{vm.car2.genislik}} mm</li>
+          <li>{{vm.car2.yukseklik}} mm</li>
+          <li>{{vm.car2.bagajKapasitesi}} lt</li>
+          <li>{{vm.car2.bosAgirlik}} kg</li>
+          <li>{{vm.car2.yakitDeposu}} lt</li>
+        </ul>
+      </div>
 
-
+    </div>
   </ion-content>
 </ion-view>

@@ -26,16 +26,18 @@
       rating: 0,
       item: null,
       car1: {},
-      car2: {}
+      car2: {},
+      carName1: ''
     });
 
     (function activate() {
       vm.car1 = carComparisationService.compareCar1;
       vm.car2 = carComparisationService.compareCar2;
+      vm.carName1 = carComparisationService.carName1;
 
     })();
 
-    
+
   }
 
   /* @ngInject */
@@ -43,7 +45,7 @@
   /* Make Controller */
 
   function MakeController($stateParams,carComparisationService){
-    
+
     var vm = angular.extend(this, {
       rating: 0,
       item: null
@@ -71,7 +73,7 @@
   /* Model ModelController */
 
   function ModelController($stateParams,carComparisationService){
-    
+
     var vm = angular.extend(this, {
       rating: 0,
       item: null
@@ -101,7 +103,7 @@
   /* Year Controller */
 
   function YearController($stateParams,carComparisationService){
-    
+
     var vm = angular.extend(this, {
       rating: 0,
       item: null
@@ -132,7 +134,7 @@
   /* Version Controller */
 
   function VersionController($stateParams,carComparisationService,$state){
-    
+
     var vm = angular.extend(this, {
       rating: 0,
       item: null,
@@ -161,12 +163,15 @@
      carComparisationService.getSpec(version.id).
       success(function (success) {
         if (vm.carNumber == 1) {
-          carComparisationService.compareCar1 = success;  
+          carComparisationService.compareCar1 = JSON.parse(success.json).version.feature;
+          carComparisationService.carName1 = JSON.parse(success.json).version.name;
+
         }
         else if (vm.carNumber == 2) {
-          carComparisationService.compareCar2 = success;  
+          carComparisationService.compareCar2 = JSON.parse(success.json).version.feature;
+
         }
-        
+
         $state.go('app.carComparisation');
         console.log(success);
       });

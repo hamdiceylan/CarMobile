@@ -19,7 +19,8 @@
       getVersion: getVersion,
       getSpec: getSpec,
       compareCar1: {},
-      compareCar2: {}
+      compareCar2: {},
+      carName1 :''
     };
     return service;
 
