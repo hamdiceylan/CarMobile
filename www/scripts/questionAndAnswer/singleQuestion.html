@@ -1,0 +1,38 @@
+
+<ion-view>
+  <ion-nav-title>
+   Cevaplıyorum
+  </ion-nav-title>
+
+  <ion-content>
+
+ {{vm.questionList.question}}
+
+
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Cevabınız</span>
+        <input type="text" ng-model="vm.answer" placeholder="Lütfen Cevabınızı yazınız">
+      </label>
+
+      <button class="button button-assertive" ng-click="vm.sendAnswer()">
+        Cevapla
+      </button>
+
+    </div>
+
+
+    <div class="list">
+
+      <a class="item" href="#/app/singleQuestion/{{item.$id}}" ng-repeat="ans in vm.questionList.answers">
+        {{ans}}
+      </a>
+
+    </div>
+
+
+
+
+
+  </ion-content>
+</ion-view>

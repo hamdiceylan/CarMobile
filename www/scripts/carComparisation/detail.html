@@ -1,0 +1,166 @@
+<ion-view>
+  <ion-nav-title>
+    {{vm.CarDetails.version.feature.yil}} {{vm.CarDetails.version.brandModel.brand.name}} {{vm.CarDetails.version.brandModel.name}}
+  </ion-nav-title>
+
+  <ion-content>
+    <ion-slide-box>
+      <ion-slide>
+        <div class="box blue article-slidebox">
+          <img ng-src="http://arabalar1.cdn.tc/static-res/{{vm.bigImage}}"/>
+          <div class="item">
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box blue article-slidebox">
+          <img ng-src="http://arabalar1.cdn.tc/static-res/{{vm.bigImage}}"/>
+          <div class="item">
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+    <div class="bgBlack padding">
+      <h3>{{vm.CarDetails.version.feature.yil}} {{vm.CarDetails.version.brandModel.brand.name}} {{vm.CarDetails.version.brandModel.name}}
+      </h3>
+      <h3> {{vm.CarDetails.version.name}}</h3>
+    </div>
+
+    <div class="content-inner">
+      <h1 ng-bind-html="vm.item.Title"></h1>
+      <div class="tabs tabs-secondary" ng-init="activeTab = 0">
+        <div class="tab-item" ng-class="{active: activeTab == 0}" ng-click="activeTab = 0">
+          Teknik Özellikler
+        </div>
+        <div class="tab-item" ng-class="{active: activeTab == 1}" ng-click="activeTab = 1">
+          Donanım
+        </div>
+      </div>
+
+      <div ng-show="activeTab == 0">
+
+        <ion-list class="out">
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Silindir Hacmi</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.silindirHacmi}} cc</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+            <div class="col col-50"><b>Beygir Gücü</b></div>
+            <div class="col col-50">{{vm.CarDetails.version.feature.beygirGucu}} hp</div>
+          </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Şehiriçi Yakıt</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.sehiriciYakit}} lt</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Şehirdışı yakıt</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.sehirdisiYakit}} lt</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Ort. Yakıt</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.ortalamaYakit}} lt</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Maks. Tork</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.maksTork}} Nm</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Lastik Ölçüleri</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.lastikEbatlari}}</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>0-100 Hız.</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.hizlanma}} sn</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Uzunluk</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.uzunluk}} mm</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Genişlik</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.genislik}} mm</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Yükseklik</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.yukseklik}} mm</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Bagaj Hacmi</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.bagajKapasitesi}} lt</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Boş Ağırlık</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.bosAgirlik}} kg</div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="row">
+              <div class="col col-50"><b>Yakıt Deposu</b></div>
+              <div class="col col-50">{{vm.CarDetails.version.feature.yakitDeposu}} lt</div>
+            </div>
+          </ion-item>
+        </ion-list>
+        </br></br>
+      </div>
+
+      <div ng-show="activeTab == 1">
+        <ul class="super2">
+          <li >
+            <span><i class="ion-checkmark"></i>{{spec.SpecDescription}}</span>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+      <!-- 	<h3>Comments</h3>
+              <ion-list>
+                  <ion-item class="item-text-wrap item-borderless" ng-repeat="comment in vm.item.comments | orderBy: '-timestamp'">
+                      <h2>{{comment.author}}</h2>
+                      <p class="comment-date">{{comment.timestamp | date : 'short'}}</p>
+                      <p style="text-align: justify;">{{comment.text}}</p>
+                  </ion-item>
+              </ion-list> -->
+
+    </div>
+    <!--
+            <div class="padding-horizontal" ng-if="!!vm.item">
+                <button class="button button-full button-positive icon ion-chatboxes" ng-click="vm.showAddComment()"> Rate and comment</button>
+            </div> -->
+
+  </ion-content>
+</ion-view>
+
+
+

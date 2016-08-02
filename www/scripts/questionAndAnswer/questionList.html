@@ -1,0 +1,39 @@
+
+<ion-view>
+  <ion-nav-title>
+    Soru-Cevap
+  </ion-nav-title>
+
+  <ion-content>
+
+
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Sorunuz</span>
+        <textarea type="text" ng-model="vm.question" placeholder="Lütfen Sorunuzu yazınız">
+        </textarea>
+      </label>
+
+      <button class="button button-assertive" ng-click="vm.askQuestion()">
+        Soru Sor
+      </button>
+
+    </div>
+
+    <ul>
+      <li >
+
+      </li>
+    </ul>
+
+
+    <div class="list">
+
+      <a class="item" href="#/app/singleQuestion/{{item.$id}}" ng-repeat="item in vm.questionList">
+        {{item.question}}
+      </a>
+
+    </div>
+
+  </ion-content>
+</ion-view>
