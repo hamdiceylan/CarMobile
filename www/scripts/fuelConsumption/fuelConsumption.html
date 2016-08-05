@@ -1,0 +1,21 @@
+<ion-view view-title="Yakıt Tüketimi" class="articles">
+
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+
+  <ion-content>
+    <img ng-src="http://arabalar1.cdn.tc/static-res/{{vm.carData.version.showCasePicture}}" alt=""> <br>
+    {{vm.carData.version.feature.yil}} Model
+    {{vm.carData.version.brandModel.brand.name}}
+    {{vm.carData.version.brandModel.name}}
+    {{vm.carData.version.name}} <br>
+
+    Yakıt Turu {{vm.carData.version.feature.yakitTuru}} <br>
+
+
+    Şehir içi {{vm.carData.version.feature.sehiriciYakit}} lt ve 30 kuruş <br>
+    Şehir dışı {{vm.carData.version.feature.sehirdisiYakit}} lt ve 30 kuruş <br>
+    Ortalama {{vm.carData.version.feature.sehiriciYakit}} lt ve 30 kuruş <br>
+
+  </ion-content>
+</ion-view>

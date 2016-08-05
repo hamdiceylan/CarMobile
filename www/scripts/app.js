@@ -20,8 +20,11 @@ angular.module('firebase-starter', [
 	'firebase-starter.categories',
 	'firebase-starter.chats',
   'firebase-starter.carComparisation',
-  'firebase-starter.questionAndAnswer'
-])
+  'firebase-starter.questionAndAnswer',
+  'firebase-starter.carSearch',
+  'firebase-starter.fuelConsumption',
+  'firebase-starter.taxCalculator'
+  ])
 
 .value('_', window._)
 
@@ -37,11 +40,12 @@ angular.module('firebase-starter', [
 			// org.apache.cordova.statusbar required
 			StatusBar.styleDefault();
 		}
+
 	});
 })
 
 .config(function($urlRouterProvider, $compileProvider) {
 	$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|blob|cdvfile|content):|data:image\//);
 	// if none of the above states are matched, use this as the fallback
-	$urlRouterProvider.otherwise('/app/articles');
+	$urlRouterProvider.otherwise('/app/carSearch');
 });

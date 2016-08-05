@@ -1,0 +1,74 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Arama Kriterleri</h1>
+  </ion-header-bar>
+  <ion-content>
+
+    <div class="list">
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Marka
+        </div>
+        <select ng-model="search.make">
+          <option selected>Bmw</option>
+          <option>Honda</option>
+          <option>Audi</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Model
+        </div>
+        <select ng-model="search.model">
+          <option selected>3 Serisi</option>
+          <option>5 Serisi</option>
+          <option>7 Serisi</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Fiyat Aralığı
+        </div>
+        <select ng-model="search.price">
+          <option value="0" selected="selected">Fiyat Aralığı</option>
+          <option value="30000-40000">30.000 TL - 40.000 TL</option>
+          <option value="40000-50000">40.000 TL - 50.000 TL</option>
+          <option value="50000-60000">50.000 TL - 60.000 TL</option>
+          <option value="60000-70000">60.000 TL - 70.000 TL</option>
+          <option value="70000-80000">70.000 TL - 80.000 TL</option>
+          <option value="80000-90000">80.000 TL - 90.000 TL</option>
+          <option value="90000-100000">90.000 TL - 100.000 TL</option>
+          <option value="100000-110000">100.000 TL - 110.000 TL</option>
+          <option value="110000-120000">110.000 TL - 120.000 TL</option>
+          <option value="120000-130000">120.000 TL - 130.000 TL</option>
+          <option value="130000-900000">130.000 TL ve yukarısı</option>
+
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Yakıt Tipi
+        </div>
+        <select  ng-model="search.fuelType">
+          <option value="1">Dizel</option>
+          <option value="2">Benzinli</option>
+          <option value="3">Hibrid</option>
+          <option value="4">Elektrikli</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Vites Tipi
+        </div>
+        <select  ng-model="search.transmission">
+          <option>Otomatik</option>
+          <option>Manuel</option>
+        </select>
+      </label>
+      <button class="button button-full button-assertive" ng-click="vm.applyFilters()">
+        Filtrele
+      </button>
+    </div>
+  </ion-content>
+</ion-modal-view>

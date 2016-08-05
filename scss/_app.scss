@@ -42,7 +42,7 @@ ion-content {
 		    color: #333333;
 		}
 	}
-	
+
 }
 
 .main {
@@ -126,7 +126,7 @@ ion-content {
 }
 
 .popup-head {
-	border-bottom: none; 
+	border-bottom: none;
 }
 
 .row {
@@ -138,4 +138,8 @@ ion-content {
 	font-size: 65px;
 	display: inherit;
 	margin-top: 35px;
+}
+
+.item h2 {
+  white-space: initial;
 }

@@ -23,8 +23,8 @@
 
 						var $ionicPopup = $injector.get('$ionicPopup');
 						var alertPopup = $ionicPopup.alert({
-							title: 'Alert',
-							template: 'There is no internet connection'
+							title: 'Bağlantı Hatası',
+							template: 'Lütfen internet bağlantınızı kontrol ediniz.'
 						});
 
 						return $q.reject('No internet connection');

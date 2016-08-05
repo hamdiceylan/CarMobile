@@ -1,0 +1,71 @@
+<ion-view view-title="MTV Hesaplama" class="articles">
+
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="list">
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Araç Tipi
+        </div>
+        <select ng-model="search.make">
+          <option selected="true">Otomobil - Kaptıkaçtı - Arazi Taşıtı ve Benzerleri</option>
+          <option>Motosikletler</option>
+          <option>Minibüsler</option>
+          <option>Panel Van ve Motorlu Karavanlar</option>
+          <option>Otobüs ve Benzerleri</option>
+          <option>Kamyon - Kamyonet - Çekici ve Benzerleri</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Araç Yaşı
+        </div>
+        <select ng-model="search.model">
+          <option value="4 - 6">1 - 3</option>
+          <option value="7 - 11">4 - 6</option>
+          <option value="12 - 15">7 - 11</option>
+          <option value="16 - 99">12 - 15</option>
+          <option>16 - 99</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Silindir Hacmi
+        </div>
+        <select ng-model="search.price">
+          <option value="1301-1600">0-1300</option>
+          <option value="1601-1800">1301-1600</option>
+          <option value="1801-2000">1601-1800</option>
+          <option value="2001-2500">1801-2000</option>
+          <option value="2501-3000">2001-2500</option>
+          <option value="3001-3500">2501-3000</option>
+          <option value="3501-4000">3001-3500</option>
+          <option value="4001-25000">3501-4000</option>
+          <option>4001-25000</option>
+
+        </select>
+      </label>
+      <button class="button button-full button-assertive" ng-click="vm.calculateTax()">
+        Hesapla
+      </button>
+    </div>
+    <div class="list" ng-if="vm.showResult">
+      <a class="item" href="#">
+        Yıllık Tutar
+        <span style="float: right">1250 TL</span>
+      </a>
+      <a class="item" href="#">
+        İlk Altı Aylık Tutar
+        <span style="float: right">625 TL</span>
+      </a>
+      <a class="item" href="#">
+        İlk Altı Aylık Tutar
+        <span style="float: right">625 TL</span>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>

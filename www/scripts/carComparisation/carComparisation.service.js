@@ -20,7 +20,10 @@
       getSpec: getSpec,
       compareCar1: {},
       compareCar2: {},
-      carName1 :''
+      compareCar1Image: {},
+      compareCar2Image: {},
+      carName1 :'',
+      carName2 :''
     };
     return service;
 

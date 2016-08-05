@@ -14,20 +14,19 @@
         </textarea>
       </label>
 
-      <button class="button button-assertive" ng-click="vm.askQuestion()">
+      <button class="button button-full button-assertive" ng-click="vm.askQuestion()">
         Soru Sor
       </button>
 
     </div>
 
-    <ul>
-      <li >
-
-      </li>
-    </ul>
-
 
     <div class="list">
+
+      <div class="item item-divider">
+        Son Sorular
+      </div>
+
 
       <a class="item" href="#/app/singleQuestion/{{item.$id}}" ng-repeat="item in vm.questionList">
         {{item.question}}

@@ -1,0 +1,21 @@
+<ion-view view-title="Araba" class="articles">
+
+  <ion-nav-buttons side="right">
+    <button class="button button-clear icon ion-funnel" ng-click="vm.showFilter()"></button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="item search-box">
+      {{vm.carList.length}} cars found
+    </div>
+    <div class="list card"  ng-repeat="car in vm.carList" ng-click="vm.openDetails(car.versionId)">
+
+      <div class="item">
+        <img ng-src="http://carportal.azurewebsites.net/{{car.imageUrl}}">
+        <h2>{{car.brandName}} {{car.modelName}} {{car.versionName}}</h2>
+        <p>{{car.price}} TL</p>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

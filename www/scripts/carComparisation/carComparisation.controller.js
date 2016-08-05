@@ -21,6 +21,10 @@
     $scope.$on('$ionicView.enter',function(){
       vm.car1 = carComparisationService.compareCar1;
       vm.car2 = carComparisationService.compareCar2;
+      vm.compareCar1Image = carComparisationService.compareCar1Image;
+      vm.compareCar2Image = carComparisationService.compareCar2Image;
+      vm.carName1 = carComparisationService.carName1;
+      vm.carName2 = carComparisationService.carName2;
     });
 
 
@@ -167,11 +171,15 @@
         if (vm.carNumber == 1) {
           carComparisationService.compareCar1 = JSON.parse(success.json).version.feature;
           carComparisationService.carName1 = JSON.parse(success.json).version.name;
+          carComparisationService.compareCar1Image = JSON.parse(success.json).version.showCasePicture;
           $state.go('app.carComparisation');
 
         }
         else if (vm.carNumber == 2) {
           carComparisationService.compareCar2 = JSON.parse(success.json).version.feature;
+          carComparisationService.carName2 = JSON.parse(success.json).version.name;
+          carComparisationService.car2bigImage = JSON.parse(success.json).version.showCasePicture;
+
           $state.go('app.carComparisation');
 
         }
@@ -179,6 +187,9 @@
           carComparisationService.compareCar2 = JSON.parse(success.json).version.feature;
           $state.go('app.carDetail', { "versionId": version.id});
 
+        }
+        else if (vm.carNumber == 4) {
+          $state.go('app.fuelConsumption', { "versionId": version.id});
         }
 
         console.log(success);

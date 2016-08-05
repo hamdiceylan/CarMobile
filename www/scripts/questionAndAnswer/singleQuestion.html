@@ -1,12 +1,45 @@
 
 <ion-view>
   <ion-nav-title>
-   Cevaplıyorum
+    {{vm.questionList.question}}
   </ion-nav-title>
 
   <ion-content>
 
- {{vm.questionList.question}}
+
+    <div class="list card">
+
+      <div class="item">
+        <h2> {{vm.questionList.question}}</h2>
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="list card" ng-repeat="ans in vm.questionList.answers">
+
+      <div class="item item-avatar">
+        <img src="mcfly.jpg">
+        <h2>Cevap veren abi</h2>
+        <p>November 05, 1955</p>
+      </div>
+
+      <div class="item item-body">
+        <p>
+          {{ans}}
+        </p>
+        <p>
+          <a href="#" class="subdued">1 Begenmiş</a>
+          <a href="#" class="subdued">5 Yorumlamış</a>
+        </p>
+      </div>
+
+    </div>
+
 
 
     <div class="list">
@@ -18,15 +51,6 @@
       <button class="button button-assertive" ng-click="vm.sendAnswer()">
         Cevapla
       </button>
-
-    </div>
-
-
-    <div class="list">
-
-      <a class="item" href="#/app/singleQuestion/{{item.$id}}" ng-repeat="ans in vm.questionList.answers">
-        {{ans}}
-      </a>
 
     </div>
 
